@@ -1,12 +1,21 @@
 # tshimologoChallenge
 
 -----Instructions -----
-#Downoload and install xammp server
-#Ounce its running start appache and Mysql
+1)  Downoload and install xammp server
 
 
-#Copy the the Project to this directory C:\xampp\htdocs
-#Run the following Sql table scripts in Xampp admin
+2)  Ounce its running start appache and Mysql
+
+
+3)  Copy the the Project to this directory C:\xampp\htdocs
+
+
+
+4)   Run the following Sql table scripts in Xampp admin
+
+
+
+
 
 CREATE TABLE IF NOT EXISTS `preferences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
