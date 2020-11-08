@@ -76,11 +76,6 @@ th, td {
 <br>
 <input type="checkbox" name="Food[]" value="Other">other
 <br><br>
-<input type="submit" value="Submit">
-</form> 
-
-<br>
-<br>
 
 <?php
 $conn = mysql_connect('127.0.0.1', 'root', '', 'test')
@@ -101,6 +96,9 @@ $retval = mysql_query('SELECT * FROM preferences');
 	
 ?>
 
+
+	
+
 <table id="t01">
   <tr>
   <th></th>
@@ -111,39 +109,23 @@ $retval = mysql_query('SELECT * FROM preferences');
 	<th>Strongly disagree(5)</th>
   </tr>
   <tr>
-    <td>I like to eat out</td>
-    <td><input type="radio" name="Option" value="<?php echo $row['id'];?>"/></td>
+    <td><?php echo $row['preference'];?></td>
+    <td><input type="radio" name="Option" value="Strongly-Agree"/></td>
     <td><input type="radio" name="Option" value="Agree"/></td>
 	<td><input type="radio" name="Option" value="Neutral"/></td>
     <td><input type="radio" name="Option" value="Disagree"/></td>
 	 <td><input type="radio" name="Option" value="Strongly-disagree"/></td>
   </tr>
-  <tr>
-    <td>I like to watch movies</td>
-   <td><input type="radio" name="Option" value="<?php echo $row['id'];?>"/></td>
-    <td><input type="radio" name="Option" value="Agree"/></td>
-	<td><input type="radio" name="Option" value="Neutral"/></td>
-    <td><input type="radio" name="Option" value="Disagree"/></td>
-	 <td><input type="radio" name="Option" value="Strongly-disagree"/></td>
-  </tr>
-  <tr>
-    <td>I like to watch TV</td>
-     <td><input type="radio" name="Option" value="Strongly-Agree"/></td>
-    <td><input type="radio" name="Option" value="Agree"/></td>
-	<td><input type="radio" name="Option" value="Neutral"/></td>
-    <td><input type="radio" name="Option" value="Disagree"/></td>
-	 <td><input type="radio" name="Option" value="Strongly-disagree"/></td>
-  </tr>
-  <tr>
-    <td>I like to listen to the radio</td>
-   <td><input type="radio" name="Option" value="Strongly-Agree"/></td>
-    <td><input type="radio" name="Option" value="Agree"/></td>
-	<td><input type="radio" name="Option" value="Neutral"/></td>
-    <td><input type="radio" name="Option" value="Disagree"/></td>
-	 <td><input type="radio" name="Option" value="Strongly-disagree"/></td>
-  </tr>
+
 </table>
-	<?php 
+<?php 
 	}?>
+<input type="submit" value="Submit">
+</form> 
+
+<br>
+<br>
+
+
 </body>
 </html>

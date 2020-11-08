@@ -10,6 +10,7 @@ $firstnames=$_POST['Firstnames'];
 $contactname=$_POST['Contactname']; 
 $date = date('Y-m-d',strtotime($_POST['Date']));
 $age=$_POST['Age']; 
+$preference = $_POST['Option']; 
 
 
 
@@ -25,11 +26,14 @@ if (!$conn) {
 }
 
                    $sqlp = "INSERT INTO checkbox(Food,Surname,Firstnames,Contactname, date,
-                                                 Age)
+                                                 Age,preference)
 												 VALUES
-												 ( '$chk','$surname',
-												 '$firstnames','$contactname',
-												 '$date','$age')";
+												 ( '$chk',
+												 '$surname',
+												 '$firstnames',
+												 '$contactname',
+												 '$date',
+												 '$age','$preference')";
 
 
                    if(mysqli_query($conn,$sqlp)) {

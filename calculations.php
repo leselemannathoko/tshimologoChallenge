@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  height: 300px;
+  border: 3px solid green; 
+}
+
+a {
+  background-color: red;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+a:active {
+  background-color: black;
+}
+</style>
+
 <?php
 $conn = mysql_connect('127.0.0.1', 'root', '', 'test')
 or
@@ -18,8 +44,6 @@ $retval = mysql_query('SELECT * FROM checkbox');
     while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
 
 
-	    echo "".$row["preference"]."<br>";
-		$id= $row["id"];
         
    }
    
@@ -30,8 +54,8 @@ $retval = mysql_query('SELECT * FROM checkbox');
           
                         if ($row) 
                            { 
-                            printf("Total number of surveys completed : " . $row); 
-							echo"<br>";
+                            printf("<div class='center'><center>Total number of surveys completed : " . $row); 
+							echo"<br></center>";
                            } 
                      // close the result. 
                   mysql_free_result($retval); 
@@ -42,21 +66,21 @@ $retval = mysql_query('SELECT * FROM checkbox');
 				        if ($Avg) 
                             { 
 					            $row = mysql_fetch_assoc($Avg); 
-                                echo "Average age:".$row["avarage"]."<br>";
+                                echo "<center>Average age:".$row["avarage"]."<br></center>";
 							}
 							
 				$Max = mysql_query('SELECT Max(Age) AS Oldest FROM checkbox');
 				        if ($Avg) 
                             { 
 					            $row = mysql_fetch_assoc($Max); 
-                                echo "Oldest person who participated in survey:".$row["Oldest"]."<br>";
+                                echo "<center>Oldest person who participated in survey:".$row["Oldest"]."<br></center>";
 							}	
                    
                  $small = mysql_query('SELECT Min(Age) AS Youngest FROM checkbox');
 				        if ( $small) 
                             { 
 					            $row = mysql_fetch_assoc( $small); 
-                                echo "Youngest person who participated in survey:".$row["Youngest"]."<br>";
+                                echo "<center>Youngest person who participated in survey:".$row["Youngest"]."<br></center></div>";
 							}				   
                          echo "<br>";
 						  echo "<br>";
@@ -65,3 +89,8 @@ $retval = mysql_query('SELECT * FROM checkbox');
 				 
  mysql_close($conn);
 ?>
+
+<a href="form.php">Home</a><br><br>
+
+
+</html>
