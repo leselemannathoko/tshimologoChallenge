@@ -1,12 +1,12 @@
 # tshimologoChallenge
 
 -----Instructions -----
-1)Downoload and install xammp server
-2)Ounce its running start appache and Mysql
+#Downoload and install xammp server
+#Ounce its running start appache and Mysql
 
 
-3)Copy the the Project to this directory C:\xampp\htdocs
-4)Run the following Sql table scripts in Xampp admin
+#Copy the the Project to this directory C:\xampp\htdocs
+#Run the following Sql table scripts in Xampp admin
 
 CREATE TABLE IF NOT EXISTS `preferences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -41,4 +41,4 @@ INSERT INTO `checkbox` (`id`, `Food`, `Surname`, `Firstnames`, `Contactname`, `d
 (8, 'Pasta,Beef-stir-fry,', 'mable', 'Smith', '07777', '2020-11-04', '40', 'Strongly-Agree');
 
 
-5) paste this in your browser http://127.0.0.1/tshimologoChallenge/main.html
+# paste this in your browser http://127.0.0.1/tshimologoChallenge/main.html
